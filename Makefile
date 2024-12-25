@@ -1,6 +1,6 @@
-MAIN_OBJ := main_test_make.o
-TEST_OBJ := test_make.o
-TARGET := maintestmake
+MAIN_OBJ := ''
+TEST_OBJ := ''
+TARGET := ''
 
 all: $(TARGET)
 

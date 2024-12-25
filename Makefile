@@ -13,7 +13,7 @@ $(MAIN_OBJ): main_test_make.c
 
 install:
 	install -d ${DESTDIR}${BINDIR}
-	install -m 0755 ${TARGET} ${BINDIR}
+	install -m 0755 ${TARGET} ${DESTDIR}${BINDIR}
 
 clean: 
 	rm -f maintestmake

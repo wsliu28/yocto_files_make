@@ -1,6 +1,6 @@
 MAIN_OBJ := ''
 TEST_OBJ := ''
-TARGET := ''
+
 
 all: maintestmake
 
@@ -15,7 +15,7 @@ $(MAIN_OBJ): main_test_make.c
 
 install:
 	install -d ${DESTDIR}${BINDIR}
-	install -m 0755 ${TARGET} ${DESTDIR}${BINDIR}
+	install -m 0755 main_test_make ${DESTDIR}${BINDIR}
 
 clean: 
 	rm -f maintestmake

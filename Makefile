@@ -9,11 +9,11 @@ all: $(TARGET)
 $(TARGET): $(MAIN_OBJ) $(TEST_OBJ)
 	$(CC) $(CFLAGS) $(LDFLAGS) $(MAIN_OBJ) $(TEST_OBJ) -o $(TARGET)
 
-$(TEST_OBJ): $(TEST_MAKE_SOURCE)
-	$(CC) $(CFLAGS) $(LDFLAGS) -c $(TEST_MAKE_SOURCE) -o $(TEST_OBJ)
+$(TEST_OBJ): test_make.c
+	$(CC) $(CFLAGS) $(LDFLAGS) -c test_make.c -o $(TEST_OBJ)
 
-$(MAIN_OBJ): $(MAIN_TEST_MAKE_SOURCE)
-	$(CC) $(CFLAGS) $(LDFLAGS) -c $(MAIN_TEST_MAKE_SOURCE) -o $(MAIN_OBJ)
+$(MAIN_OBJ): main_test_make.c
+	$(CC) $(CFLAGS) $(LDFLAGS) -c main_test_make.c -o $(MAIN_OBJ)
 
 install:
 	install -d ${DESTDIR}${BINDIR}

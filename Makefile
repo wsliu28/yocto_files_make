@@ -1,5 +1,8 @@
 #MAIN_OBJ := ''
 #TEST_OBJ := ''
+BINDIR := ''
+DESTDIR := ''
+
 
 all: maintestmake
 
@@ -13,8 +16,8 @@ main_test_make.o: main_test_make.c
 	$(CC) $(CFLAGS) $(LDFLAGS) -c main_test_make.c -o main_test_make.o
 
 install:
-	install -d ${D}${bindir}
-	install -m 0755 maintestmake ${D}${bindir}/
+	install -d ${DESTDIR}${BINDIR}
+	install -m 0755 maintestmake ${DESTDIR}${BINDIR}
 
 clean: 
 	rm -f maintestmake

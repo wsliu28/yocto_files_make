@@ -2,7 +2,9 @@ MAIN_OBJ := main_test_make.o
 TEST_OBJ := test_make.o
 TARGET := maintestmake
 
-all: main_test_make.o test_make.o
+all: $(TARGET)
+
+$(TARGET): main_test_make.o test_make.o
 	$(CC) $(CFLAGS) $(LDFLAGS) main_test_make.o test_make.o -o maintestmake
 
 $(TEST_OBJ): test_make.c

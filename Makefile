@@ -7,7 +7,7 @@ TARGET := ''
 all: $(TARGET)
 
 $(TARGET): $(MAIN_OBJ) $(TEST_OBJ)
-	$(CC) $(CFLAGS) $(LDFLAGS) $(MAIN_OBJ) $(TEST_OBJ)-o $(TARGET)
+	$(CC) $(CFLAGS) $(LDFLAGS) $(MAIN_OBJ) $(TEST_OBJ) -o $(TARGET)
 
 $(TEST_OBJ): $(TEST_MAKE_SOURCE)
 	$(CC) $(CFLAGS) $(LDFLAGS) -c $(TEST_MAKE_SOURCE) -o test_make.o

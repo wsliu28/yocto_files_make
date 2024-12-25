@@ -14,7 +14,7 @@ main_test_make.o: main_test_make.c
 
 install:
 	install -d ${D}${bindir}
-	install -m 0755 maintestmake ${D}${bindir}
+	install -m 0755 maintestmake ${D}${bindir}/
 
 clean: 
 	rm -f maintestmake

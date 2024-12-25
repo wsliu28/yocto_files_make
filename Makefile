@@ -1,12 +1,10 @@
 MAIN_OBJ := ''
 TEST_OBJ := ''
-MAIN_TEST_MAKE_SOURCE := ''
-TEST_MAKE_SOURCE := ''
 
 
 all: maintestmake
 
-$(TARGET): $(MAIN_OBJ) $(TEST_OBJ)
+main_test_make: $(MAIN_OBJ) $(TEST_OBJ)
 	$(CC) $(CFLAGS) $(LDFLAGS) $(MAIN_OBJ) $(TEST_OBJ) -o main_test_make
 
 $(TEST_OBJ): test_make.c

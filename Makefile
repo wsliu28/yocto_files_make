@@ -1,6 +1,6 @@
 MAIN_OBJ := ''
 TEST_OBJ := ''
-
+TARGET := ''
 
 all: maintestmake
 

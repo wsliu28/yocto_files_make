@@ -11,5 +11,9 @@ $(TEST_OBJ): test_make.c
 $(MAIN_OBJ): main_test_make.c
 	$(CC) $(CFLAGS) $(LDFLAGS) -c main_test_make.c -o main_test_make.o
 
+install:
+	install -d ${DESTDIR}${BINDIR}
+	install -m 0755 ${TARGET} ${DINDIR}
+	
 clean: 
 	rm -f maintestmake

@@ -1,5 +1,7 @@
 MAIN_OBJ := ''
 TEST_OBJ := ''
+MAIN_SOURCE := ''
+TEST_SOUREC := ''
 BINDIR := ''
 DESTDIR := ''
 

@@ -6,8 +6,8 @@ TARGET := ''
 
 all: $(TARGET)
 
-$(TARGET): main_test_make.o test_make.o
-	$(CC) $(CFLAGS) $(LDFLAGS) main_test_make.o test_make.o -o maintestmake
+$(TARGET): $(MAIN_OBJ) $(TEST_OBJ)
+	$(CC) $(CFLAGS) $(LDFLAGS) $(MAIN_OBJ) $(TEST_OBJ)-o $(TARGET)
 
 $(TEST_OBJ): $(TEST_MAKE_SOURCE)
 	$(CC) $(CFLAGS) $(LDFLAGS) -c $(TEST_MAKE_SOURCE) -o test_make.o

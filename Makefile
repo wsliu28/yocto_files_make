@@ -11,11 +11,11 @@ all: maintestmake
 maintestmake: ${MAIN_OBJ} ${TEST_OBJ}
 	$(CC) $(CFLAGS) $(LDFLAGS) ${MAIN_OBJ} ${TEST_OBJ} -o maintestmake
 
-${TEST_OBJ}: test_make.c
-	$(CC) $(CFLAGS) $(LDFLAGS) -c test_make.c -o ${TEST_OBJ}
+${TEST_OBJ}: ${TEST_SOUREC}
+	$(CC) $(CFLAGS) $(LDFLAGS) -c ${TEST_SOUREC} -o ${TEST_OBJ}
 
-${MAIN_OBJ}: main_test_make.c
-	$(CC) $(CFLAGS) $(LDFLAGS) -c main_test_make.c -o ${MAIN_OBJ}
+${MAIN_OBJ}: ${MAIN_SOURCE}
+	$(CC) $(CFLAGS) $(LDFLAGS) -c ${MAIN_SOURCE} -o ${MAIN_OBJ}
 
 install:
 	install -d ${DESTDIR}${BINDIR}
